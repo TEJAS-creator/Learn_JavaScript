@@ -372,6 +372,23 @@ tejas.greet();
 
 
 
+// Here Callbacks are being used
+function walkDog(callback){
+    setTimeout(()=> {
+        console.log("Walk the dog");
+        callback();
+    },2000);
+}
+
+function cleanKitchen(callback){
+    setTimeout(()=> {
+        console.log("Clean the kitchen");
+        callback();
+    },1000);
+}
+walkDog(()=>{
+    cleanKitchen(()=>console.log("You Finished !!!"));
+});
 
 
 
